@@ -6,7 +6,7 @@ const handleReceivedResponse = (response) => {
   console.log(JSON.parse(response.body));
 };
 
-const url = 'https://api.github.com/repos/sinatra/sinatra';
+const url = 'https://jsonplaceholder.typicode.com/todos';
 
 // Call `got` and provide the handler callback function.
 // This will get called by `got` when the response is received.
