@@ -3,7 +3,7 @@ const got = require('got');
 
 // Create a "handler" callback function.
 const handleReceivedResponse = (response) => {
-  console.log(response.body);
+  console.log(JSON.parse(response.body));
 };
 
 const url = 'https://api.github.com/repos/sinatra/sinatra';
@@ -20,10 +20,10 @@ got(url).then(handleReceivedResponse);
 //     console.log(response.body);
 //   });
 
-const stringValue = '{ "name": "John" }';
-const objectValue = JSON.parse(stringValue);
+// const stringValue = '{ "name": "John" }';
+// const objectValue = JSON.parse(stringValue);
 
-console.log(objectValue); // { name: 'John' }
+// console.log(objectValue); // { name: 'John' }
 
-// We can access properties like a regular JS object
-console.log(objectValue.name);
+// // We can access properties like a regular JS object
+// console.log(objectValue.name);
