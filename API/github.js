@@ -4,15 +4,9 @@ class Github {
   }
 
   fetch(repoName) {
-    this.info = setInterval = (function
-      this.api.fetchRepositoryData(
-        repoName,
-        (repoData) => {
-          return repoData;
-        },
-        0
-      )
-    );
+    this.info = this.api.fetchRepositoryData(repoName, (repoData) => {
+      return repoData;
+    });
   }
 
   //     const githubapi = new GithubApi(repoName, getRepoData = (response) => {
